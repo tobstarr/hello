@@ -1,0 +1,32 @@
+{
+	"ImportPath": "github.com/tobstarr/hello",
+	"GoVersion": "go1.7",
+	"GodepVersion": "v74",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/garyburd/redigo/internal",
+			"Comment": "v1.0.0-5-gffa8d46",
+			"Rev": "ffa8d46ada782d81cfda81a0fbd9f45ceae448e8"
+		},
+		{
+			"ImportPath": "github.com/garyburd/redigo/redis",
+			"Comment": "v1.0.0-5-gffa8d46",
+			"Rev": "ffa8d46ada782d81cfda81a0fbd9f45ceae448e8"
+		},
+		{
+			"ImportPath": "github.com/inconshreveable/mousetrap",
+			"Rev": "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
+		},
+		{
+			"ImportPath": "github.com/spf13/cobra",
+			"Rev": "336d629de064dbb12166b46c06039dbcfb935de1"
+		},
+		{
+			"ImportPath": "github.com/spf13/pflag",
+			"Rev": "cb88ea77998c3f024757528e3305022ab50b43be"
+		}
+	]
+}
