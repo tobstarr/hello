@@ -4,8 +4,6 @@ set -e
 d=$(mktemp -d /tmp/go-bin-XXXX)
 trap "rm -Rf $d" EXIT
 
-echo "pwd: ${pwd}"
-
 export REPO=github.com/tobstarr/hello
 export BIN_NAME=$(basename $REPO)
 export GO_VERSION=1.7.1
