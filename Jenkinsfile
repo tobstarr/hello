@@ -17,6 +17,7 @@ node {
 
   if (env.BRANCH_NAME == "master") {
     stage "Release"
+    input 'Deploy to master to production?'
     sh 'bash ./jenkins/release.sh'
   }
 }
