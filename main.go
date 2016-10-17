@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"net/url"
 	"os"
+	"runtime"
 	"strings"
 	"time"
 
@@ -118,13 +119,15 @@ func statusHandler(version string) func(w http.ResponseWriter, r *http.Request) 
 			}
 			defer c.Close()
 			rsp := struct {
-				Status   bool    `json:"status,omitempty"`
-				Took     float64 `json:"took,omitempty"`
-				Version  string  `json:"version,omitempty"`
-				Hostname string  `json:"hostname,omitempty"`
+				Status    bool    `json:"status,omitempty"`
+				Took      float64 `json:"took,omitempty"`
+				Version   string  `json:"version,omitempty"`
+				Hostname  string  `json:"hostname,omitempty"`
+				GoVersion string  `json:"go_version,omitempty"`
 			}{
-				Version:  version,
-				Hostname: hostname,
+				Version:   version,
+				Hostname:  hostname,
+				GoVersion: runtime.Version(),
 			}
 			s, err := redis.String(c.Do("PING"))
 			if err != nil {
