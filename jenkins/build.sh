@@ -44,7 +44,4 @@ image_tag=${IMAGE_REPO}:${short_sha}
 echo "building $image_tag"
 docker build -t ${image_tag} --build-arg VERSION=${short_sha} .
 
-echo "built image ${image_tag}"
-docker push ${image_tag}
-
 echo -n ${image_tag} > ${WORKSPACE}/image_tag
